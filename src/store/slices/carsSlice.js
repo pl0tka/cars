@@ -19,7 +19,7 @@ const carsSlice = createSlice({
         id: nanoid(),
       });
     },
-    removeCar(action, state) {
+    removeCar(state, action) {
       // Assumption:
       // action.payload === the id of the car that should be removed
       const updated = state.data.filter((car) => car.id !== action.payload);
